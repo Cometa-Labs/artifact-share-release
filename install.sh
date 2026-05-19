@@ -21,12 +21,15 @@ URL="https://github.com/$REPO/releases/latest/download/$ASSET"
 
 echo "Downloading artifact-share ($ARCH)..."
 mkdir -p "$INSTALL_DIR"
-curl -fsSL "$URL" -o "$BINARY"
-chmod +x "$BINARY"
 
-# Strip quarantine and ad-hoc sign so Gatekeeper allows execution
-xattr -c "$BINARY" 2>/dev/null || true
-codesign --sign - --force "$BINARY" 2>/dev/null || true
+# Download to a temp file, sign it, then move into place.
+# This avoids macOS code-signing cache issues from overwriting a running binary.
+TMP="$(mktemp)"
+curl -fsSL "$URL" -o "$TMP"
+chmod +x "$TMP"
+xattr -c "$TMP" 2>/dev/null || true
+codesign --sign - --force "$TMP" 2>/dev/null || true
+mv -f "$TMP" "$BINARY"
 
 echo "Running setup..."
 "$BINARY" setup
