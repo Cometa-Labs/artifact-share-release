@@ -15,6 +15,15 @@ for arg in "$@"; do
   esac
 done
 
+# --clean: clear credentials and exit (run install separately after)
+if [ "$CLEAN" = true ]; then
+  echo "Clearing previous credentials..."
+  rm -f "$TOKEN_FILE"
+  rm -f "$PREFS_FILE"
+  echo "Done. Run the install command now to reinstall."
+  exit 0
+fi
+
 # Detect architecture
 ARCH=$(uname -m)
 case "$ARCH" in
@@ -40,13 +49,6 @@ chmod +x "$TMP"
 xattr -c "$TMP" 2>/dev/null || true
 codesign --sign - --force "$TMP" 2>/dev/null || true
 mv -f "$TMP" "$BINARY"
-
-# Clear stored credentials and preferences on clean install
-if [ "$CLEAN" = true ]; then
-  echo "Clearing previous credentials..."
-  rm -f "$TOKEN_FILE"
-  rm -f "$PREFS_FILE"
-fi
 
 echo "Running setup..."
 "$BINARY" setup

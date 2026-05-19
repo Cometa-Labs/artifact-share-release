@@ -14,13 +14,12 @@ curl -fsSL https://raw.githubusercontent.com/Cometa-Labs/artifact-share-release/
 
 Auto-detects Apple Silicon vs Intel, downloads the right binary, strips Gatekeeper quarantine, and registers the server in Claude Desktop and Claude CLI. Then restart Claude Desktop or reload Claude CLI.
 
-**Clean install** (clears saved Google auth token and folder history before setup):
+**Clean install** — clears saved Google auth token and folder history, then reinstalls (useful when switching accounts or fixing auth issues):
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/Cometa-Labs/artifact-share-release/main/install.sh | bash -s -- --clean
+curl -fsSL https://raw.githubusercontent.com/Cometa-Labs/artifact-share-release/main/install.sh | bash
 ```
-
-Use this if you're switching Google accounts, revoking access, or resolving an auth issue.
 
 **Manual fallback:**
 
