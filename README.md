@@ -7,6 +7,7 @@ Binary releases are attached to GitHub releases. `version.json` is the version m
 ## First-time install
 
 [![Installation walkthrough](https://img.youtube.com/vi/rGDq0NmN7ZQ/maxresdefault.jpg)](https://youtu.be/rGDq0NmN7ZQ)
+*Click the image above to watch the install tutorial*
 
 **One-liner in Terminal:**
 
@@ -39,6 +40,7 @@ curl -fsSL https://raw.githubusercontent.com/Cometa-Labs/artifact-share-release/
 ## Sharing flow
 
 [![Sharing flow walkthrough](https://img.youtube.com/vi/B73lmfq6swk/maxresdefault.jpg)](https://youtu.be/B73lmfq6swk)
+*Click the image above to watch the sharing flow tutorial*
 
 ---
 
