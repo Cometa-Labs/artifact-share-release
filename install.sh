@@ -24,8 +24,9 @@ mkdir -p "$INSTALL_DIR"
 curl -fsSL "$URL" -o "$BINARY"
 chmod +x "$BINARY"
 
-# Strip macOS quarantine so Gatekeeper doesn't block it
-xattr -d com.apple.quarantine "$BINARY" 2>/dev/null || true
+# Strip quarantine and ad-hoc sign so Gatekeeper allows execution
+xattr -c "$BINARY" 2>/dev/null || true
+codesign --sign - --force "$BINARY" 2>/dev/null || true
 
 echo "Running setup..."
 "$BINARY" setup
