@@ -1,7 +1,7 @@
 {
-  "version": "0.0.0",
+  "version": "0.0.1",
   "binaries": {
-    "darwin-arm64": "https://github.com/Cometa-Labs/artifact-share-release/releases/download/v0.0.0/artifact-share",
-    "darwin-x64": "https://github.com/Cometa-Labs/artifact-share-release/releases/download/v0.0.0/artifact-share-x64"
+    "darwin-arm64": "https://github.com/Cometa-Labs/artifact-share-release/releases/download/v0.0.1/artifact-share",
+    "darwin-x64": "https://github.com/Cometa-Labs/artifact-share-release/releases/download/v0.0.1/artifact-share-x64"
   }
 }
