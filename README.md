@@ -23,11 +23,25 @@ Binary releases are attached to GitHub releases. `version.json` is the manifest 
 
 ## First-time install
 
-Team members download the latest binary from the Releases tab, then run:
+**Preferred — one-liner in Terminal:**
 
 ```bash
-chmod +x ~/Downloads/artifact-share
-~/Downloads/artifact-share setup
+curl -fsSL https://raw.githubusercontent.com/Cometa-Labs/artifact-share-release/main/install.sh | bash
 ```
 
-After that, updates happen automatically via the `update_server` tool in Claude Desktop — no re-running setup, no full app restart.
+Auto-detects Apple Silicon vs Intel, downloads the right binary, and runs setup. Then restart Claude Desktop.
+
+**Manual fallback:**
+
+1. Download the right binary from the [Releases](https://github.com/Cometa-Labs/artifact-share-release/releases/latest) tab:
+   - `artifact-share` — Apple Silicon (M1/M2/M3)
+   - `artifact-share-x64` — Intel Mac
+2. In Terminal:
+   ```bash
+   chmod +x ~/Downloads/artifact-share
+   xattr -d com.apple.quarantine ~/Downloads/artifact-share
+   ~/Downloads/artifact-share setup
+   ```
+3. Restart Claude Desktop
+
+After install, updates happen automatically via the `update_server` tool in Claude Desktop — no re-running setup, no full app restart.
