@@ -12,7 +12,7 @@ Binary releases are attached to GitHub releases. `version.json` is the version m
 curl -fsSL https://raw.githubusercontent.com/Cometa-Labs/artifact-share-release/main/install.sh | bash
 ```
 
-Auto-detects Apple Silicon vs Intel, downloads the right binary, strips Gatekeeper quarantine, and registers the server in Claude Desktop. Then restart Claude Desktop.
+Auto-detects Apple Silicon vs Intel, downloads the right binary, strips Gatekeeper quarantine, and registers the server in Claude Desktop and Claude CLI. Then restart Claude Desktop or reload Claude CLI.
 
 **Manual fallback:**
 
@@ -25,7 +25,7 @@ Auto-detects Apple Silicon vs Intel, downloads the right binary, strips Gatekeep
    xattr -d com.apple.quarantine ~/Downloads/artifact-share
    ~/Downloads/artifact-share setup
    ```
-3. Restart Claude Desktop
+3. Restart Claude Desktop or reload Claude CLI
 
 ## How updates work
 
