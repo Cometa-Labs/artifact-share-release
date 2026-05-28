@@ -5,7 +5,7 @@
     "darwin-x64": "https://github.com/Cometa-Labs/artifact-share-release/releases/download/v0.0.13/artifact-share-x64"
   },
   "sha256": {
-    "darwin-arm64": "d4fa9d964cfc07368d30376073132604ef353d6b75d83a7cc584101db90a2e5a",
-    "darwin-x64": "8c11b3fd942a081ebb2c24316ceff91dd0ce0e63a092bbbb5d60ddb441c27e64"
+    "darwin-arm64": "b93c7137a4695921ecbac7d624a107bd31dbb2a8837c3725743381940d501e30",
+    "darwin-x64": "1ce26124cbdb006b91658804059a8a2fef182509c310e77daeed0c9d925f0c13"
   }
 }
