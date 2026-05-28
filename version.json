@@ -1,11 +1,11 @@
 {
-  "version": "0.0.12",
+  "version": "0.0.13",
   "binaries": {
-    "darwin-arm64": "https://github.com/Cometa-Labs/artifact-share-release/releases/download/v0.0.12/artifact-share",
-    "darwin-x64": "https://github.com/Cometa-Labs/artifact-share-release/releases/download/v0.0.12/artifact-share-x64"
+    "darwin-arm64": "https://github.com/Cometa-Labs/artifact-share-release/releases/download/v0.0.13/artifact-share",
+    "darwin-x64": "https://github.com/Cometa-Labs/artifact-share-release/releases/download/v0.0.13/artifact-share-x64"
   },
   "sha256": {
-    "darwin-arm64": "93a54aaf837d1399845092181bbe945eb0e935c94973ebbbb9e7007394c59de5",
-    "darwin-x64": "4c1fcff080c85debdd13003ed2d82fd6ddb6fd7164ef177e48ca5360a9485fc2"
+    "darwin-arm64": "d4fa9d964cfc07368d30376073132604ef353d6b75d83a7cc584101db90a2e5a",
+    "darwin-x64": "8c11b3fd942a081ebb2c24316ceff91dd0ce0e63a092bbbb5d60ddb441c27e64"
   }
 }
