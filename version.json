@@ -3,9 +3,5 @@
   "binaries": {
     "darwin-arm64": "https://github.com/Cometa-Labs/artifact-share-release/releases/download/v0.0.11/artifact-share",
     "darwin-x64": "https://github.com/Cometa-Labs/artifact-share-release/releases/download/v0.0.11/artifact-share-x64"
-  },
-  "sha256": {
-    "darwin-arm64": "3e5ae4b87fb0d12f192baebc61eec0883f7c26f3b3944e3b689f7c2cc89ff1ee",
-    "darwin-x64": "b1ee25e515f2298a027e47136b33a5d2582e70dec4458ab280925076bc584e70"
   }
 }
